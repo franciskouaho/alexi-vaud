@@ -118,9 +118,19 @@ export class GameService {
         gameState,
         lastActivity: serverTimestamp()
       });
-    } catch (error) {
-      console.error('Erreur lors de la mise à jour de l\'état du jeu:', error);
-      throw error;
+    } catch (error: unknown) {
+      // Si le document n'existe pas, on le crée avec setDoc (merge: true)
+      const err = error as { code?: string; message?: string };
+      if (err.code === 'not-found' || (err.message && err.message.includes('No document to update'))) {
+        const playerRef = doc(db, 'players', playerId);
+        await setDoc(playerRef, {
+          gameState,
+          lastActivity: serverTimestamp()
+        }, { merge: true });
+      } else {
+        console.error('Erreur lors de la mise à jour de l\'état du jeu:', error);
+        throw error;
+      }
     }
   }
 

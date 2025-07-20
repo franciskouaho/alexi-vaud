@@ -1,6 +1,8 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import { GameState } from '../types/game';
-import { GameService, PlayerData } from '../services/gameService';
+import { GameService } from '../services/gameService';
+import { auth } from '../config/firebase';
+import { signInAnonymously } from 'firebase/auth';
 
 const initialGameState: GameState = {
   currentPage: 'home',
@@ -55,8 +57,12 @@ export const useGameState = () => {
   const updatePlayerData = useCallback(async (pseudo: string, email: string) => {
     setIsLoading(true);
     setError(null);
-    
+
     try {
+      // Authentification anonyme Firebase
+      if (!auth.currentUser) {
+        await signInAnonymously(auth);
+      }
       // Créer ou récupérer le joueur
       const newPlayerId = await gameService.savePlayer({
         pseudo,
@@ -68,13 +74,11 @@ export const useGameState = () => {
         totalAttempts: 0,
         totalHintsUsed: 0
       });
-      
       setPlayerId(newPlayerId);
       setGameState(prev => ({
         ...prev,
         playerData: { pseudo, email }
       }));
-      
       // Charger l'état existant si le joueur existe déjà
       await loadGameState(email);
     } catch (err) {

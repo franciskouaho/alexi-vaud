@@ -17,8 +17,8 @@ function App() {
     showHint,
   } = useGameState();
 
-  const handleStartGame = (pseudo: string, email: string) => {
-    updatePlayerData(pseudo, email);
+  const handleStartGame = async (pseudo: string, email: string) => {
+    await updatePlayerData(pseudo, email);
     navigateToPage('map');
   };
 
