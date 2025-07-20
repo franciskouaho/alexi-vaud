@@ -3,13 +3,13 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyDsPdvwfJtJ5lfkrSbEtrmW6gQ7lO7sW48",
+  authDomain: "jeu-d-enquete---chatel.firebaseapp.com",
+  projectId: "jeu-d-enquete---chatel",
+  storageBucket: "jeu-d-enquete---chatel.firebasestorage.app",
+  messagingSenderId: "937006056816",
+  appId: "1:937006056816:web:cc984f68c596308cd73bb5",
+  measurementId: "G-GL35JENGW3"
 };
 
 // Initialize Firebase
