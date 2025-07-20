@@ -39,19 +39,19 @@ export const PuzzleGame: React.FC<PuzzleGameProps> = ({
   useEffect(() => {
     const initialPieces: PuzzlePiece[] = [
       { id: 1, currentPosition: 1, correctPosition: 1, imageUrl: '/mission2/placement1-n7.jpeg', displayNumber: 7 },
-      { id: 2, currentPosition: 2, correctPosition: 2, imageUrl: '/mission2/placement2-n4.jpeg', displayNumber: 4 },
-      { id: 3, currentPosition: 3, correctPosition: 3, imageUrl: '/mission2/placement3-n10.jpeg', displayNumber: 10 },
-      { id: 4, currentPosition: 4, correctPosition: 4, imageUrl: '/mission2/placement4-n1.jpeg', displayNumber: 1 },
-      { id: 5, currentPosition: 5, correctPosition: 5, imageUrl: '/mission2/placement5-n12.jpeg', displayNumber: 12 },
-      { id: 6, currentPosition: 6, correctPosition: 6, imageUrl: '/mission2/placement6-n2.jpeg', displayNumber: 2 },
-      { id: 7, currentPosition: 7, correctPosition: 7, imageUrl: '/mission2/placement7-n3.jpeg', displayNumber: 3 },
-      { id: 8, currentPosition: 8, correctPosition: 8, imageUrl: '/mission2/placement8-n11.jpeg', displayNumber: 11 },
-      { id: 9, currentPosition: 9, correctPosition: 9, imageUrl: '/mission2/placement9-n5.jpeg', displayNumber: 5 },
-      { id: 10, currentPosition: 10, correctPosition: 10, imageUrl: '/mission2/placement10-n9.jpeg', displayNumber: 9 },
-      { id: 11, currentPosition: 11, correctPosition: 11, imageUrl: '/mission2/placement11-n6.jpeg', displayNumber: 6 },
-      { id: 12, currentPosition: 12, correctPosition: 12, imageUrl: '/mission2/placement12-n8.jpeg', displayNumber: 8 }
+      { id: 2, currentPosition: 2, correctPosition: 2, imageUrl: '/mission2/placement2 - N°4.jpeg', displayNumber: 4 },
+      { id: 3, currentPosition: 3, correctPosition: 3, imageUrl: '/mission2/placement3 - N°10.jpeg', displayNumber: 10 },
+      { id: 4, currentPosition: 4, correctPosition: 4, imageUrl: '/mission2/placement4 - N°1.jpeg', displayNumber: 1 },
+      { id: 5, currentPosition: 5, correctPosition: 5, imageUrl: '/mission2/placement5 - N°12.jpeg', displayNumber: 12 },
+      { id: 6, currentPosition: 6, correctPosition: 6, imageUrl: '/mission2/placement6 - N°2.jpeg', displayNumber: 2 },
+      { id: 7, currentPosition: 7, correctPosition: 7, imageUrl: '/mission2/placement7 - N°3.jpeg', displayNumber: 3 },
+      { id: 8, currentPosition: 8, correctPosition: 8, imageUrl: '/mission2/placement8 - N°11.jpeg', displayNumber: 11 },
+      { id: 9, currentPosition: 9, correctPosition: 9, imageUrl: '/mission2/placement9 - N°5.jpeg', displayNumber: 5 },
+      { id: 10, currentPosition: 10, correctPosition: 10, imageUrl: '/mission2/placement10 - N°9.jpeg', displayNumber: 9 },
+      { id: 11, currentPosition: 11, correctPosition: 11, imageUrl: '/mission2/placement11 - N°6.jpeg', displayNumber: 6 },
+      { id: 12, currentPosition: 12, correctPosition: 12, imageUrl: '/mission2/placement12 - N°8.jpeg', displayNumber: 8 }
     ];
-    
+
     // Shuffle the pieces
     const shuffled = [...initialPieces];
     for (let i = shuffled.length - 1; i > 0; i--) {

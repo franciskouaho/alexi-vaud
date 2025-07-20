@@ -218,7 +218,7 @@ export const Mission: React.FC<MissionProps> = ({
               <div className="mb-6">
                 <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-6 text-center">
                   <img
-                    src="/mission2/la-vierge-et-son-enfant.png"
+                    src="/mission2/la Vierge et son enfant.png"
                     alt="Statue de la Vierge et son enfant"
                     className="max-w-full h-auto mx-auto rounded-lg shadow-lg"
                     style={{ maxHeight: '400px' }}
