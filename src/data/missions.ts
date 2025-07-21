@@ -77,7 +77,7 @@ export const missions: Mission[] = [
       "Des bancs me sont de compagnie"
     ],
     content: {
-      story: "Fouille la boîte à livres : un chiffre y est caché."
+      story: "Fouille et tu trouveras un chiffre caché."
     }
   }
 ];

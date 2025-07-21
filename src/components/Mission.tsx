@@ -260,17 +260,18 @@ export const Mission: React.FC<MissionProps> = ({
                       <p className="text-amber-800 whitespace-pre-line">
                         <strong>Indice {index + 1} :</strong> {qrCodeHints[missionId][index]}
                       </p>
+                      {/* Ajout de l'image pour l'indice QR code 2 (Majestic) */}
+                      {index === 1 && missionId === 3 && (
+                        <img src="/mission2/IMG_4646.png" alt="Indice QR code 2" className="mt-2 rounded shadow max-w-xs" />
+                      )}
                     </div>
                   );
                 })}
 
-                <button
-                  onClick={handleOpenCamera}
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-md flex items-center justify-center space-x-2"
-                >
-                  <Camera className="w-5 h-5" />
-                  <span>Scanner le QR code</span>
-                </button>
+                {/* Remplacement du bouton par la phrase */}
+                <div className="w-full bg-blue-100 text-blue-900 px-6 py-3 rounded-lg font-semibold flex items-center justify-center mt-2">
+                  Scanne ce QR code avec ton appareil photo et reviens ici !
+                </div>
               </div>
             )}
 
