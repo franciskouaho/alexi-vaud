@@ -262,7 +262,7 @@ export const Mission: React.FC<MissionProps> = ({
                       </p>
                       {/* Ajout de l'image pour l'indice QR code 2 (Majestic) */}
                       {index === 1 && missionId === 3 && (
-                        <img src="/mission2/IMG_4646.png" alt="Indice QR code 2" className="mt-2 rounded shadow max-w-xs" />
+                        <img src="/mission2/IMG_4646.png" alt="Indice QR code 2" className="mt-2 rounded shadow max-w-[250px] w-full h-auto object-contain mx-auto" style={{maxWidth: '90%', height: 'auto'}} />
                       )}
                     </div>
                   );
