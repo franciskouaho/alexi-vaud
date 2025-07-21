@@ -265,14 +265,15 @@ export const PuzzleGame: React.FC<PuzzleGameProps> = ({
         {Object.entries(showQrHints).map(([hintIndex, isVisible]) => {
           if (!isVisible) return null;
           const index = parseInt(hintIndex);
+          // Affiche l'image uniquement pour l'indice 2 du Majestic (mission 3)
+          const isMajestic = typeof window !== 'undefined' && window.location.pathname.includes('majestic');
           return (
             <div key={index} className="mb-3 p-4 bg-amber-100 border border-amber-300 rounded-lg">
               <p className="text-amber-800 whitespace-pre-line">
                 <strong>Indice {index + 1} :</strong> {qrCodeHints[index]}
               </p>
-              {/* Ajout de l'image pour l'indice QR code 2 (Majestic) */}
-              {index === 1 && (
-                <img src="/mission2/IMG_4646.png" alt="Indice QR code 2" className="mt-2 rounded shadow w-full max-w-xs h-auto object-contain" style={{maxWidth: '100%', height: 'auto'}} />
+              {index === 1 && isMajestic && (
+                <img src="/mission2/IMG_4646.png" alt="Indice QR code 2" className="mt-2 rounded shadow max-w-[250px] w-full h-auto object-contain mx-auto" style={{maxWidth: '90%', height: 'auto'}} />
               )}
             </div>
           );
