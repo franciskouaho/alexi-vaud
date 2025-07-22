@@ -111,7 +111,7 @@ export const PuzzleGame: React.FC<PuzzleGameProps> = ({
     onAttempt();
     
     // The correct code is now "678"
-    const correctCode = "678";
+    const correctCode = "236";
     
     if (selectedCode === correctCode) {
       onComplete(selectedCode);
