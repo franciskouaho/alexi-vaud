@@ -22,7 +22,7 @@ export const missions: Mission[] = [
     name: "L'Énigme du Casino",
     location: "Casino",
     description: "Un puzzle représentant deux statues visibles proche du Casino. Reconstitue-les pour comprendre le code.",
-    answer: "678", // Updated code
+    answer: "236", // Updated code
     type: "puzzle",
     hints: [
       "Le chiffre en face de la ligne t'indique la photo à garder",
@@ -49,7 +49,7 @@ export const missions: Mission[] = [
       "2010 – 1928 = ?"
     ],
     content: {
-      story: "À la fin de la Première Guerre mondiale, il devient un cinéma jusqu'en 1926. Racheté en 1927, il devient un hôtel en novembre 1928. Une submersion par Xynthia en 2010."
+      story: "À la fin de la Première Guerre mondiale, il devient un cinéma jusqu’en 1926. Racheté en 1927 et après de nombreuses rénovations, il est transformé en hôtel sous le nom du Majestic et ouvre ses portes en novembre 1928. Pour finir en 2010, l’hôtel affronte la tempête Xynthia… sans en sortir affaibli pour autant !"
     }
   },
   {
